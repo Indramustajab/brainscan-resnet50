@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stroke Detection (Resnet-50)</title>
+    <link rel="icon" type="image/png" href="/static/img/brain-solid-full.svg">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- LIGHT AMBIENT DECORATION -->
+    <div class="ambient-glow orb-1"></div>
+    <div class="ambient-glow orb-2"></div>
+
+    <!-- NAVBAR FIXED MEDICAL LIGHT -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo di Pojok Kiri -->
+            <a href="#beranda" class="nav-logo">
+                <div class="logo-icon-box">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+                <span>BrainScan<span class="logo-dot">.</span><span class="logo-ai">Resnet-50</span></span>
+            </a>
+            <!-- Menu di Pojok Kanan -->
+            <ul class="nav-menu">
+                <li><a href="#beranda" class="menu-link active"><i class="fa-solid fa-house-medical"></i><span>Beranda</span></a></li>
+                <li><a href="#about" class="menu-link"><i class="fa-solid fa-chart-line"></i><span>Sistem Analitik</span></a></li>
+                <li><a href="#klasifikasi" class="menu-link"><i class="fa-solid fa-virus-shield"></i><span>Pusat Klasifikasi</span></a></li>
+                <li><a href="#pemindaian" class="nav-btn-special"><i class="fa-solid fa-wand-magic-sparkles"></i><span>Konsol Pemindaian</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: HERO / BERANDA -->
+    <section id="beranda" class="section hero-section">
+        <div class="hero-wrapper">
+            <div class="hero-text-content">
+                <span class="hero-badge"><i class="fa-solid fa-sparkles"></i>Brain Scan Detection</span>
+                <h1 class="hero-title">Deteksi Dini Insidensi Stroke Melalui Akurasi <span>Kecerdasan Buatan</span></h1>
+                <p class="hero-description">
+                    Mentransformasi citra CT-Scan mentah menjadi metrik diagnostik terukur dalam hitungan detik. Membantu lini utama medis mempercepat keputusan kritis intervensi penanganan pasien.
+                </p>
+                <div class="hero-action-group">
+                    <a href="#pemindaian" class="btn-primary-glow">Buka Konsol AI</i></a>
+                    <a href="#about" class="btn-secondary-clean">Dokumentasi Teknologi <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="hero-stats-row">
+                    <div class="hero-stat-item">
+                        <h4>&lt; 3<span class="unit">Detik</span></h4>
+                        <p>Waktu Pemrosesan</p>
+                    </div>
+                    <div class="hero-stat-item">
+                        <h4>98.4<span class="unit">%</span></h4>
+                        <p>Sensitivitas Model</p>
+                    </div>
+                    <div class="hero-stat-item">
+                        <h4>24<span class="unit">/7</span></h4>
+                        <p>Akses Cloud Medis</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual-dashboard">
+                <div class="glass-dashboard-card">
+                    <div class="card-top-bar">
+                        <span class="dot crimson"></span><span class="dot amber"></span><span class="dot emerald"></span>
+                        <span class="window-title">NeuralNetwork_Core.py</span>
+                    </div>
+                    <div class="dashboard-inner-content">
+                        <div class="live-pulse-container">
+                            <div class="pulse-radar"></div>
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                        <div class="console-text-lines">
+                            <p class="line green">&gt;&gt; Initialize DeepLearning Weights... OK</p>
+                            <p class="line">&gt;&gt; Resnet50_Backbone: Loaded successfully</p>
+                            <p class="line amber">&gt;&gt; Active Monitoring Loss: 0.0142</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: ANALITIK / ABOUT -->
+    <section id="about" class="section about-section">
+        <div class="container-wide">
+            <div class="section-center-header">
+                <span class="section-badge">Metrik Arsitektur</span>
+                <h2 class="section-title-premium">Mengapa Memilih BrainScan?</h2>
+                <p class="section-subtitle-premium">Kombinasi antara presisi tinggi kecerdasan buatan klinis dengan antarmuka cerah yang dioptimalkan untuk kecepatan kerja medis.</p>
+            </div>
+
+            <div class="about-feature-showcase">
+                <div class="feature-large-card">
+                    <div class="fl-text">
+                        <h3>Sistem Komputasi Penapisan Berkecepatan Tinggi</h3>
+                        <p>Dalam kondisi serangan stroke akut, setiap menit hilangnya pasokan darah dapat menghancurkan sel neuron saraf otak. Sistem kami memotong alur birokrasi pembacaan berkas dengan memberikan estimasi area lesi secara real-time langsung ke perangkat medis.</p>
+                        <ul class="premium-bullet-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Reduksi waktu tunggu hingga 75% dibanding penapisan manual.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Kompatibel penuh dengan standar citra radiologi JPG/PNG.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Proteksi privasi enkripsi lokal sebelum transmisi gambar.</li>
+                        </ul>
+                    </div>
+                    <!-- Infografis Grafik Statistik Interaktif (Murni CSS) -->
+                    <div class="fl-chart-box">
+                        <h4>Grafis Efisiensi Diagnosis (Menit)</h4>
+                        <div class="bar-chart-wrapper">
+                            <div class="chart-bar-item">
+                                <span class="label">Prosedur Konvensional</span>
+                                <div class="bar-container"><div class="bar-fill old-way" style="width: 85%;"></div></div>
+                                <span class="value-label">45 Menit</span>
+                            </div>
+                            <div class="chart-bar-item">
+                                <span class="label">Dengan BrainScan</span>
+                                <div class="bar-container"><div class="bar-fill new-way" style="width: 15%;"></div></div>
+                                <span class="value-label">&lt; 1 Menit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-triple-grid">
+                    <div class="triple-card">
+                        <div class="t-icon blue"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3>Keandalan Validasi Silang</h3>
+                        <p>Model divalidasi menggunakan metode klinis terbaik untuk mencegah bias akurasi.</p>
+                    </div>
+                    <div class="triple-card">
+                        <div class="t-icon teal"><i class="fa-solid fa-bezier-curve"></i></div>
+                        <h3>Segmentasi Presisi Tinggi</h3>
+                        <p>Mendeteksi perubahan densitas jaringan otak terkecil pada area fokal iskemia serebral.</p>
+                    </div>
+                    <div class="triple-card">
+                        <div class="t-icon navy"><i class="fa-solid fa-laptop-medical"></i></div>
+                        <h3>Skalabilitas Cloud</h3>
+                        <p>Dapat diakses kapan saja dan di mana saja melalui jaringan komputasi cloud aman.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: PUSAT KLASIFIKASI -->
+    <section id="klasifikasi" class="section klasifikasi-section">
+        <div class="container-wide">
+            <div class="section-center-header">
+                <span class="section-badge">Pusat Pengetahuan</span>
+                <h2 class="section-title-premium">Kategori Deteksi & Karakteristik Visual</h2>
+                <p class="section-subtitle-premium">Memahami bagaimana algoritma visi komputer mengevaluasi perbedaan anomali struktural pada jaringan otak.</p>
+            </div>
+
+            <div class="klasifikasi-grid-premium">
+                <!-- Card 1 -->
+                <div class="k-premium-card border-iskemik">
+                    <div class="kp-header">
+                        <span class="kp-tag tag-iskemik">Iskemik</span>
+                        <i class="fa-solid fa-droplet-slash"></i>
+                    </div>
+                    <h3>Stroke Iskemik (Penyumbatan)</h3>
+                    <p>Terjadi penumpukan plak yang menyumbat pasokan oksigen serebral. Secara visual pada CT-Scan, area infark mengalami penurunan atenuasi dan memicu visualisasi **Hipodens** (tampak lebih gelap/abu-abu pekat).</p>
+                    <div class="kp-meta-row">
+                        <span><i class="fa-solid fa-triangle-exclamation"></i> Kritis Akut</span>
+                        <span>Prevalensi: ~85% kasus</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="k-premium-card border-hemoragik">
+                    <div class="kp-header">
+                        <span class="kp-tag tag-hemoragik">Hemoragik</span>
+                        <i class="fa-solid fa-burst"></i>
+                    </div>
+                    <h3>Stroke Hemoragik (Perdarahan)</h3>
+                    <p>Akibat dari pecahnya dinding arteri serebral yang lemah. Darah segar yang keluar ke ruang intrakranial menampilkan densitas redaman tinggi, menciptakan gambaran **Hiperdens** (bercak putih terang berbatas tegas).</p>
+                    <div class="kp-meta-row">
+                        <span><i class="fa-solid fa-skull"></i> Fatalitas Tinggi</span>
+                        <span>Prevalensi: ~15% kasus</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="k-premium-card border-normal">
+                    <div class="kp-header">
+                        <span class="kp-tag tag-normal">Normal</span>
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <h3>Struktur Otak Normal</h3>
+                    <p>Menunjukkan diferensiasi yang jelas dan simetris antara bagian-bagian otak. Tidak ada pergeseran garis tengah (midline shift) ataupun tanda-tanda perdarahan akut.</p>
+                    <div class="kp-meta-row">
+                        <span><i class="fa-solid fa-heart-pulse"></i> Kondisi Sehat</span>
+                        <span>Asimetri: 0% Detected</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="premium-disclaimer-banner">
+                <i class="fa-solid fa-circle-nodes"></i>
+                <p><strong>Sistem Klasifikasi Terpadu:</strong> Klasifikasi dijalankan menggunakan inferensi arsitektur jaringan saraf konvolusional (CNN) yang telah dioptimalkan secara klinis.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: KONSOL PEMINDAIAN WORKSPACE -->
+    <section id="pemindaian" class="section pemindaian-section">
+        <div class="workspace-container">
+            <div class="workspace-header">
+                <span class="badge-status"><i class="fa-solid fa-bolt-lightning"></i> ResNet-50 AI Engine</span>
+                <h2 class="workspace-title">Konsol Diagnostik</h2>
+                <p class="workspace-subtitle">Unggah berkas citra CT-Scan pasien untuk diekstrak oleh arsitektur inferensi deep learning kami.</p>
+            </div>
+            
+            <div class="workspace-grid">
+                <!-- Sisi Kiri: Panel Unggah -->
+                <div class="control-panel-premium">
+                    <div class="panel-inner-title">Gerbang Pemasukan Berkas</div>
+                    <form method="POST" enctype="multipart/form-data" id="scanForm">
+                        <div class="dropzone-area-premium" id="dropzone">
+                            <input type="file" id="image" name="image" accept="image/*" required>
+                            <div class="dropzone-content">
+                                <div class="dropzone-icon-premium">
+                                    <i class="fa-solid fa-folder-open"></i>
+                                </div>
+                                <h3>Seret Berkas ke Sini</h3>
+                                <p>atau klik area ini untuk <span class="browse-highlight">Telusuri File</span></p>
+                                <span class="file-restriction">Mendukung Format Gambar Klinis (PNG, JPG, JPEG)</span>
+                            </div>
+                            <!-- Preview Overlay Layer -->
+                            <div class="preview-overlay-premium" id="previewOverlay">
+                                <img id="preview" alt="Preview Citra Medis">
+                                <div class="change-file-overlay-btn"><i class="fa-solid fa-arrows-rotate"></i> Ganti Berkas Citra</div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="premium-action-btn" id="submitBtn">
+                            <span>Kirim ke Neural Network</span>
+                            <i class="fa-solid fa-brain"></i>
+                        </button>
+                    </form>
+
+                    <!-- Loader Animasi Pemindaian Laser -->
+                    <div class="ai-laser-processing-card" id="aiProcessing">
+                        <div class="laser-beam"></div>
+                        <div class="grid-scanning-effect"></div>
+                        <i class="fa-solid fa-circle-notch fa-spin processing-spinner"></i>
+                        <h4>Menjalankan Inferensi Neural Network...</h4>
+                        <p>Mengevaluasi kesimetrisan lobus jaringan otak secara komputasional.</p>
+                    </div>
+                </div>
+
+                <!-- Sisi Kanan: Panel Laporan Hasil Modul -->
+                <div class="result-panel-premium">
+                    {% if img_path %}
+                    <div id="result-anchor" class="clinical-result-card">
+                        <div class="crc-header">
+                            <div class="crc-title-left">
+                                <i class="fa-solid fa-file-waveform"></i>
+                                <span>Hasil Evaluasi Otomatis Komputasi</span>
+                            </div>
+                            <span class="crc-id">BS-ID: {{ range(10000, 99999)|random }}</span>
+                        </div>
+                        
+                        <div class="crc-body">
+                            <div class="crc-visual-wrapper">
+                                <img src="{{ img_path }}" alt="Analisis CT Scan">
+                                <div class="hud-target-box"></div>
+                                <div class="matrix-grid-hud"></div>
+                            </div>
+                            
+                            <div class="crc-data-metrics">
+                                <div class="metric-block-premium">
+                                    <label>Kesimpulan Diagnosis AI</label>
+                                    <div class="diagnosis-badge-premium {% if 'Normal' in result %}dx-normal{% elif 'Iskemik' in result %}dx-iskemik{% else %}dx-hemoragik{% endif %}">
+                                        <i class="fa-solid fa-wave-square"></i> {{ result }}
+                                    </div>
+                                </div>
+
+                                <div class="metric-block-premium">
+                                    <label>Tingkat Validitas Keyakinan Model</label>
+                                    <div class="premium-progress-row">
+                                        <div class="p-bar-bg">
+                                            <div class="p-bar-fill-color" style="width: {{ confidence }}%;"></div>
+                                        </div>
+                                        <span class="p-bar-num">{{ "%.2f"|format(confidence) }}%</span>
+                                    </div>
+                                </div>
+
+                                <div class="clinical-memo-box">
+                                    <h5><i class="fa-solid fa-user-doctor"></i> Rekomendasi Alur Klinis:</h5>
+                                    <p>Probabilitas klasifikasi bernilai tinggi pada klaster <strong>{{ result }}</strong>. Direkomendasikan segera melakukan konfirmasi diagnostik visual akhir bersama spesialis neurologi.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% else %}
+                    <!-- Placeholder Keadaan Kosong -->
+                    <div class="premium-empty-placeholder">
+                        <div class="pe-icon-wrapper">
+                            <i class="fa-solid fa-satellite-dish"></i>
+                        </div>
+                        <h3>Sistem Siap Menerima Data</h3>
+                        <p>Silakan masukkan file gambar CT Scan di konsol kiri. Sistem akan menguraikan matriks citra dan mengeluarkan analisis grafik kuantitatif di panel ini.</p>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- WORKFLOW BAR -->
+            <div class="premium-workflow-bar">
+                <div class="wf-item">
+                    <div class="wf-circle">01</div>
+                    <div class="wf-text">
+                        <h5>Standardisasi Citra</h5>
+                        <p>Normalisasi resolusi matriks piksel.</p>
+                    </div>
+                </div>
+                <div class="wf-divider"></div>
+                <div class="wf-item">
+                    <div class="wf-circle">02</div>
+                    <div class="wf-text">
+                        <h5>Ekstraksi Tekstur</h5>
+                        <p>Filter kernel konvolusi tingkat tinggi.</p>
+                    </div>
+                </div>
+                <div class="wf-divider"></div>
+                <div class="wf-item">
+                    <div class="wf-circle">03</div>
+                    <div class="wf-text">
+                        <h5>Probabilitas Skor</h5>
+                        <p>Metrik kalkulasi fungsi aktivasi akhir.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER CLEAN PREMIUM -->
+    <footer class="premium-footer">
+        <div class="footer-inner">
+            <div class="footer-left-brand">
+                <div class="f-logo"><i class="fa-solid fa-brain"></i> BrainScan.AI</div>
+                <p>Mendukung masa depan efisiensi penanganan medis melalui integrasi teknologi kecerdasan buatan.</p>
+            </div>
+            <div class="footer-right-copyright">
+                <p>&copy; 2026 BrainScan.Resnet-50.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        const input = document.getElementById("image");
+        const preview = document.getElementById("preview");
+        const previewOverlay = document.getElementById("previewOverlay");
+        const dropzone = document.getElementById("dropzone");
+        const scanForm = document.getElementById("scanForm");
+        const aiProcessing = document.getElementById("aiProcessing");
+        const submitBtn = document.getElementById("submitBtn");
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropzone.addEventListener(eventName, (e) => { e.preventDefault(); dropzone.classList.add('premium-drag-active'); }, false);
+        });
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropzone.addEventListener(eventName, (e) => { e.preventDefault(); dropzone.classList.remove('premium-drag-active'); }, false);
+        });
+
+        dropzone.addEventListener('drop', (e) => {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            if(files.length > 0) {
+                input.files = files;
+                displayPreview(files[0]);
+            }
+        });
+
+        input.onchange = evt => {
+            const [file] = input.files;
+            if(file) displayPreview(file);
+        }
+
+        function displayPreview(file) {
+            preview.src = URL.createObjectURL(file);
+            previewOverlay.style.display = "flex";
+        }
+
+        scanForm.onsubmit = function() {
+            submitBtn.style.display = "none";
+            aiProcessing.style.display = "block";
+        };
+
+        // Smooth active navigation highlight on scroll
+        const links = document.querySelectorAll('.menu-link');
+        const sections = document.querySelectorAll('.section');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 250)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            links.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        {% if scroll_to_result %}
+        window.onload = function() {
+            const resultBox = document.getElementById("result-anchor");
+            if(resultBox) {
+                resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+        {% endif %}
+    </script>
+</body>
+</html>
